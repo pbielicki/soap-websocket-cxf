@@ -31,7 +31,7 @@ public class JaxWsClientEndpoint {
         public void run() {
           try {
             remote.sendText(SOAP_PREFIX + "<echo:hello><name>Przemek</name></echo:hello>" + SOAP_END);
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 20; i++) {
               remote.sendText(SOAP_PREFIX + "<echo:calculate><input><requestId>" + i + "</requestId>"
                   + "<left>" + (10 + i) + "</left><right>" + (20 + i) + "</right><operation>ADD</operation></input></echo:calculate>" + SOAP_END);
             }
